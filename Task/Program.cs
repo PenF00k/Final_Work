@@ -1,5 +1,5 @@
 ﻿
-void PrintArray(string[] arr)
+void PrintArray(string[] arr) // Метод печати
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
@@ -7,12 +7,17 @@ void PrintArray(string[] arr)
         if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
 
-string[] NewArray(string [] arr)
+string[] NewArray(string [] arr) // Метод поиска элементов длиной менее 3-х символов
 {
-    string[] newArr = new string[2];
+    int k = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) k++;
+    }
+    string[] newArr = new string[k];
     int j = 0;
     for (int i = 0; i < arr.Length; i++)
     {
@@ -25,6 +30,7 @@ string[] NewArray(string [] arr)
     return newArr;
 }
 
-string[] array = { "hello, 123, 45, hello2" };
+string[] array = { "hello", "123", "456", "hello2", "dft" };
 string[] newArray = NewArray(array);
-PrintArray(newArray);
+PrintArray(array);
+Console.Write("-->");
