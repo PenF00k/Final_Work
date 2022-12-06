@@ -31,32 +31,6 @@ void PrintArray(string?[] arr) // Метод печати массива
     Console.Write(" ]");
 }
 
-// string[] NewArray(string[] arr) // Метод поиска элементов длиной менее 3-х символов
-// {
-//     int k = 0;
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         if (arr[i].Length <= 3) k++;
-//     }
-//     string[] newArr = new string[k];
-//     int j = 0;
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         if (arr[i].Length <= 3)
-//         {
-//             newArr[j] = arr[i];
-//             j++;
-//         }
-//     }
-//     return newArr;
-// }
-
-// string[] array = { "hello", "123", "456", "hello2", "dft", "der" };
-// string[] newArray = NewArray(array);
-// PrintArray(array);
-// Console.Write("-->");
-// PrintArray(newArray);
-
 string?[] NewArray(string?[] arr) // Метод поиска элементов длиной менее 3-х символов
 {
     string?[] newArr = new string[arr.Length];
